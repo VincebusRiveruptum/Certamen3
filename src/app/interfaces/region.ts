@@ -1,7 +1,5 @@
 import { Clima } from "./clima";
 
-
-
 export let nombreregiones = [
     "Valparaiso",
     "Santiago",

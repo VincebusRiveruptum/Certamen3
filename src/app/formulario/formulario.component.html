@@ -1,1 +1,78 @@
-<p>formulario works!</p>
+<div class="contenedor">
+    <div>
+        <form [formGroup]="formulario" (ngSubmit)="ValidarDatos()" novalidate>
+                <!--Select de región-->
+                <div class="form-group">
+                    <label>Región</label>                      
+                    <select id="regiones" formControlName="inputregiones" class="form-control" >
+                        <option value="0"> Valparaiso</option>
+                        <option value="1"> Santiago</option>
+                        <option value="2"> Bío-Bío</option>            
+                        <option value="3"> Araucanía</option>
+                    </select>                      
+                </div>
+                <hr>
+                <!--Select de clima-->
+                <div class="form-group">
+                    <div class="form-check">
+                        <input id="rsoleado" name="rtiempo" type="radio" value="0" formControlName="rtiempo" class="form-check-input" checked >
+                        <label for="rsoleado" class="form-check-label">Soleado</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="rlluvioso" name="rtiempo" type="radio" value="1" formControlName="rtiempo" class="form-check-input">
+                        <label for="rlluvioso" class="form-check-label">Lluvioso</label>
+                    </div>
+                    <div class="form-check">    
+                        <input id="rtormenta" name="rtiempo" type="radio" value="2" formControlName="rtiempo" class="form-check-input">
+                        <label for="rtormenta" class="form-check-label">Tormenta</label>  
+                    </div>
+                    <div class="form-check"></div>
+                    <div class="form-check"></div>
+                </div>
+                <hr>
+                <!--Select de dia de la semana-->
+                <div class="form-group">
+                    <label>Dia</label>
+                    <select id="inputdia" formControlName="inputdia" type="name" class="form-control">
+                        <option value="0"> Lunes</option>
+                        <option value="1"> Martes</option>
+                        <option value="2"> Miercoles</option>            
+                        <option value="3"> Jueves</option>
+                        <option value="4"> Viernes</option>
+                        <option value="5"> Sábado</option>
+                        <option value="6"> Domingo</option>
+                    </select>      
+                <!-- Input de temperatura-->
+                </div>
+                <div class="form-group">
+                    <label>Temperatura</label>
+                    <input id="inputt" formControlName="inputtemp" class="form-control" type="name">
+                    <div *ngIf="formulario.controls['inputtemp'].invalid && (formulario.controls['inputtemp'].dirty || formulario.controls['inputtemp'].touched)" class="alert alert-danger">
+                        <div *ngIf="formulario.controls['inputtemp'].hasError('required')">
+                          * Temperatura obligatoria!
+                        </div> 
+                    </div>
+                </div>
+                <!-- Radio btn de sistema metrico-->
+                <div class="form-group">
+                    <label>Grados</label>
+                    <div class="form-check">
+                        <input id="rcelsius" name="rgrados" type="radio" value="Celsius" formControlName="rgrados" class="form-check-input" checked >
+                        <label for="rcelsius" class="form-check-label">Celsius</label>
+                    </div>
+                    <div class="form-check">
+                        <input id="rfahr" name="rgrados" type="radio" value="Fahrenheit" formControlName="rgrados" class="form-check-input"  >
+                        <label for="rfahr" class="form-check-label">Fahrenheit</label>
+                    </div>
+                </div>
+                <hr>
+                <div id="boton">
+                    <button class="btn btn-primary" type="submit" [disabled]="formulario.invalid">Modificar</button>
+                    <div *ngIf="estado">
+                        Dia modificado
+                   </div>       
+                </div>             
+  
+        </form> 
+    </div>     
+</div>

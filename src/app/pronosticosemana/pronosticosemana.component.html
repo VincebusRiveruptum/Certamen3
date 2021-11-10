@@ -1,7 +1,7 @@
 <div class="contenedor">
     <div *ngFor="let region of listaRegiones">
         <div *ngIf="tiempo.regionSeleccionada == region.nombre" id="Pronostico">
-            <div *ngFor="let climaregion of region.pronostico" id="region">
+            <div *ngFor="let climaregion of region.pronostico" id="region" [routerLink]="['/formulario']" routerLinkActive="router-Link-Active" (click)="obtenerDia(climaregion)">
                 <div id="imagen">
                     <!--Aqui la imagen del pronostico-->
                     <img src="../../assets/{{climaregion.clima}}.png">

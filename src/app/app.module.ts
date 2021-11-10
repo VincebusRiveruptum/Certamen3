@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { PronosticosemanaComponent } from './pronosticosemana/pronosticosemana.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormularioComponent } from './formulario/formulario.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormularioComponent } from './formulario/formulario.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

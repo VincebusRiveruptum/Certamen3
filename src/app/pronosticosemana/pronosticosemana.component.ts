@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Clima } from '../interfaces/clima';
-import { Region, listaRegiones, dias, climas, tiempo } from '../interfaces/region';
+import { Region, listaRegiones, dias, climas, tiempo, PronosticoTiempo } from '../interfaces/region';
 
 @Component({
   selector: 'app-pronosticosemana',
@@ -17,5 +17,14 @@ export class PronosticosemanaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
+  obtenerDia(climaregion:Clima):Clima{
+    /* Pasamos el día de la semana a modificar */
+    /*
+    console.log(climaregion.clima);
+    console.log(climaregion.dia);
+    console.log(climaregion.temperatura)
+    */
+    return climaregion;
+  }
 }
