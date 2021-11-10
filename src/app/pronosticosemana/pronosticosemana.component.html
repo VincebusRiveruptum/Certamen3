@@ -1,0 +1,22 @@
+<div class="contenedor">
+    <div *ngFor="let region of listaRegiones">
+        <div *ngIf="tiempo.regionSeleccionada == region.nombre" id="Pronostico">
+            <div *ngFor="let climaregion of region.pronostico" id="region">
+                <div id="imagen">
+                    <!--Aqui la imagen del pronostico-->
+                    <img src="../../assets/{{climaregion.clima}}.png">
+                </div>
+                <div id="informacion">
+                    <h2>{{dias[climaregion.dia]}}</h2>
+                    <h1>{{climas[climaregion.clima]}}</h1>
+                    <div *ngIf="tiempo.celsiusfahrenheit == true"> 
+                        <h2>{{(climaregion.temperatura * (1.8)) + 32}} °F</h2>
+                    </div>
+                    <div *ngIf="tiempo.celsiusfahrenheit == false"> 
+                        <h2>{{climaregion.temperatura}} °C</h2>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

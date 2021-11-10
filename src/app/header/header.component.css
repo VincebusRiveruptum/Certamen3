@@ -1,0 +1,52 @@
+.header #d1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2%;
+}
+
+.header #d1 #imgdiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header #d1 #imgdiv img {
+  padding: 2%;
+  width: 96px;
+  height: 96px;
+}
+
+.header #d1 #temps a {
+  padding: 0px 10px;
+  word-wrap: normal;
+  display: inline-block;
+}
+
+.header #selectorregion {
+  padding: 2%;
+}
+
+.header #selectorregion #cont {
+  padding: 5px;
+  border: 1px;
+  border-style: double;
+  text-align: center;
+}
+
+.header #selectorregion #cont a {
+  padding: 0px 10px;
+  word-wrap: normal;
+  display: inline-block;
+}
+/*# sourceMappingURL=header.component.css.map */

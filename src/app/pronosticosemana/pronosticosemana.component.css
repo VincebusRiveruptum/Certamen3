@@ -1,0 +1,33 @@
+.contenedor {
+  margin: auto;
+  padding: 1%;
+}
+
+.contenedor #Pronostico {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: auto;
+  padding: 1%;
+}
+
+.contenedor #Pronostico #region {
+  padding: 1%;
+}
+
+.contenedor #Pronostico #region #imagen img {
+  width: 64px;
+  height: auto;
+}
+
+#region:hover {
+  background-color: #cce1f7;
+}
+/*# sourceMappingURL=pronosticosemana.component.css.map */

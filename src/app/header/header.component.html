@@ -1,0 +1,21 @@
+<div class="header">
+    <div id="d1">
+        <div id="imgdiv">
+            <img src="..\assets\icono.png">
+            <h1>Clima</h1>   
+        </div>
+        <div id="temps">
+            <h1>Chile- {{nombreregiones[tiempo.regionSeleccionada]}}</h1>
+            <a [routerLink]="['/pronostico']" routerLinkActive="router-Link-Active"  (click)="definirCelsius()">Celsius</a>
+            <a [routerLink]="['/pronostico']" routerLinkActive="router-Link-Active"  (click)="definirFahrenheit()">Fahrenheit</a>
+        </div>    
+    </div>
+    <div id="selectorregion">
+        <div id="cont">
+            <a [routerLink]="['/pronostico']" routerLinkActive="router-Link-Active" (click)="definirRegion(0)">Valparaiso</a>
+            <a [routerLink]="['/pronostico']" routerLinkActive="router-Link-Active" (click)="definirRegion(1)">Santiago</a>
+            <a [routerLink]="['/pronostico']" routerLinkActive="router-Link-Active" (click)="definirRegion(2)">Bío-Bío</a>
+            <a [routerLink]="['/pronostico']" routerLinkActive="router-Link-Active" (click)="definirRegion(3)">Araucanía</a>
+        </div>
+    </div>
+</div>

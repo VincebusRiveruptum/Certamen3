@@ -1,0 +1,41 @@
+.header{
+    #d1{
+        display:flex;
+        flex-direction: row;    
+        justify-content:space-around;
+        padding:2%;
+        #imgdiv{
+            display:flex;
+            flex-direction: row; 
+            
+            img{
+                padding:2%; 
+                width: 96px;
+                height: 96px;
+            }
+        }
+        #temps{
+            a{
+                padding: 0px 10px;
+                word-wrap: normal;
+                display: inline-block;
+            }
+        }
+        
+    }
+    #selectorregion{
+        padding:2%;
+        #cont{
+           
+            padding: 5px;
+            border: 1px;
+            border-style: double;
+            text-align: center;
+            a{
+                padding: 0px 10px;
+                word-wrap: normal;
+                display: inline-block;
+            }
+        }
+    }
+}

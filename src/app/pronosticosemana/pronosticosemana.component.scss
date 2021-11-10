@@ -1,0 +1,28 @@
+.contenedor{
+    margin:auto;
+    padding:1%;
+
+    #Pronostico{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin:auto;
+        padding:1%;
+            
+        #region{
+        padding:1%;
+            #imagen{
+                
+                img{
+                    width:64px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+}
+
+#region:hover{
+    background-color: rgb(204, 225, 247);
+}
